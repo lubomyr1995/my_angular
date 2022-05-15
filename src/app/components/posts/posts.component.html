@@ -1,0 +1,8 @@
+<div style="display: flex">
+  <div style="min-width: 40%">
+    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
