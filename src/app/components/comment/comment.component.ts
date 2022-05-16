@@ -12,7 +12,7 @@ export class CommentComponent implements OnInit {
   @Input()
   comment: IComment
 
-  constructor(private router: Router, private activatedRoute :ActivatedRoute) {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -20,6 +20,6 @@ export class CommentComponent implements OnInit {
 
   navigateMe(comment: IComment) {
     this.router.navigate(['details', comment.id],
-      {relativeTo: this.activatedRoute, state: comment})
+      {relativeTo: this.activatedRoute, state: comment}).then()
   }
 }

@@ -6,9 +6,13 @@
   align-items: center;
 }
 
-.header > a {
+a {
   text-decoration: none;
   font-size: 40px;
   cursor: pointer;
   color: snow;
+}
+
+.active a {
+  color: red;
 }

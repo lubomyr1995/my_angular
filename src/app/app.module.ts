@@ -14,12 +14,14 @@ import {UserDetailsComponent} from './components/user-details/user-details.compo
 import {PostDetailsComponent} from './components/post-details/post-details.component';
 import {CommentDetailsComponent} from './components/comment-details/comment-details.component';
 import {NotFoundComponent} from './components/not-found/not-found.component';
+import {UserCheckerService} from "./services/user-checker.service";
+import {UserResolverService} from "./services/user-resolver.service";
 
 const routes: Routes = [
   {path: '', redirectTo: 'users', pathMatch: 'full'},
   {
-    path: 'users', component: UsersComponent, children: [
-      {path: 'details/:id', component: UserDetailsComponent},
+    path: 'users', component: UsersComponent, resolve: {allUsers: UserResolverService}, children: [
+      {path: 'details/:id', component: UserDetailsComponent, canActivate: [UserCheckerService]},
     ]
   },
   {

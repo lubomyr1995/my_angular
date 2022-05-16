@@ -1,22 +1,24 @@
 <!--<div>{{details | json}}</div>-->
-<h3>{{details.id}}) {{details.name}}</h3>
-<div>username: {{details.username}}</div>
-<div>email: {{details.email}}</div>
-<ul>Address:
-  <li>suite: {{details.address.suite}}</li>
-  <li>city: {{details.address.city}}</li>
-  <li>street: {{details.address.street}}</li>
-  <li>zipcode: {{details.address.zipcode}}</li>
-  <ul>geo:
-    <li>lat: {{details.address.geo.lat}}</li>
-    <li>lng: {{details.address.geo.lng}}</li>
+<div *ngIf="details">
+  <h3>{{details.id}}) {{details.name}}</h3>
+  <div>username: {{details.username}}</div>
+  <div>email: {{details.email}}</div>
+  <ul>Address:
+    <li>suite: {{details.address.suite}}</li>
+    <li>city: {{details.address.city}}</li>
+    <li>street: {{details.address.street}}</li>
+    <li>zipcode: {{details.address.zipcode}}</li>
+    <ul>geo:
+      <li>lat: {{details.address.geo.lat}}</li>
+      <li>lng: {{details.address.geo.lng}}</li>
+    </ul>
   </ul>
-</ul>
-<div>phone: {{details.phone}}</div>
-<div>website: {{details.website}}</div>
-<ul>Company:
-  <li>name: {{details.company.name}}</li>
-  <li>catchPhrase: {{details.company.catchPhrase}}</li>
-  <li>bs: {{details.company.bs}}</li>
-</ul>
+  <div>phone: {{details.phone}}</div>
+  <div>website: {{details.website}}</div>
+  <ul>Company:
+    <li>name: {{details.company.name}}</li>
+    <li>catchPhrase: {{details.company.catchPhrase}}</li>
+    <li>bs: {{details.company.bs}}</li>
+  </ul>
+</div>
 
