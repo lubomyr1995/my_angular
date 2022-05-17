@@ -1,0 +1,8 @@
+<div style="display: flex; justify-content: space-between">
+  <div style="min-width: 50%">
+    <app-comment *ngFor="let comment of comments" [comment]="comment"></app-comment>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
