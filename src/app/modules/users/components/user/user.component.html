@@ -1,0 +1,4 @@
+<h3>
+  {{user.id}}.) {{user.name}}
+  <a style="text-decoration: none" [routerLink]="['details', user.id]" [state]="{data: user}">more details</a>
+</h3>

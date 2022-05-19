@@ -1,0 +1,8 @@
+<div class="wrap_users">
+  <div>
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
