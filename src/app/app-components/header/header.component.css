@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: black;
+  height: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+  font-size: 36px;
+}
+
+.active a {
+  color: red;
+}
+
+.activated a {
+  color: blue;
+}
