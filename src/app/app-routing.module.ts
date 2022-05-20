@@ -10,7 +10,7 @@ import {HomeGuard} from "./services/home.guard";
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: '', redirectTo: 'users', pathMatch: 'full'},
       {path: 'home', canDeactivate: [HomeGuard], canActivate: [HomeGuard], component: HomeComponent},
       {path: 'users', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule)},
       {path: 'posts', loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)},
