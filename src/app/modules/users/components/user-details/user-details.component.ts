@@ -11,7 +11,7 @@ import {UserService} from "../../services";
 export class UserDetailsComponent implements OnInit {
   details: IUser
 
-  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) {
+  constructor(private activatedRoute: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -20,7 +20,7 @@ export class UserDetailsComponent implements OnInit {
       if (data) {
         this.details = data
       } else {
-        this.userService.getById(id).subscribe(value => this.details = value)
+        this.activatedRoute.data.subscribe(({dataUser}) => this.details = dataUser)
       }
     })
   }

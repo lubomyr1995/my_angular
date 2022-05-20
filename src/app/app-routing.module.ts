@@ -5,12 +5,13 @@ import {RouterModule, Routes} from "@angular/router";
 import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
 import {HomeComponent} from "./components/home/home.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {HomeGuard} from "./services/home.guard";
 
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
       {path: '', redirectTo: 'home', pathMatch: 'full'},
-      {path: 'home', component: HomeComponent},
+      {path: 'home', canDeactivate: [HomeGuard], canActivate: [HomeGuard], component: HomeComponent},
       {path: 'users', loadChildren: () => import('./modules/users/users.module').then(m => m.UsersModule)},
       {path: 'posts', loadChildren: () => import('./modules/posts/posts.module').then(m => m.PostsModule)},
       {path: 'comments', loadChildren: () => import('./modules/comments/comments.module').then(m => m.CommentsModule)}
