@@ -1,0 +1,4 @@
+.wrap_posts {
+  display: flex;
+  justify-content: space-between;
+}

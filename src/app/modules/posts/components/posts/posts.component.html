@@ -1,0 +1,8 @@
+<div class="wrap_posts">
+  <div>
+    <app-post *ngFor="let p of posts" [post]="p"></app-post>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

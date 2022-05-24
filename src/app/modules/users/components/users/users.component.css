@@ -1,0 +1,6 @@
+.wrap_users {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+  padding-left: 100px;
+}

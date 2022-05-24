@@ -1,0 +1,4 @@
+<app-header></app-header>
+<!--<h1 *ngIf="loading">loading...</h1>-->
+<h1 *ngIf="loading$ | async">loading...</h1>
+<router-outlet></router-outlet>
