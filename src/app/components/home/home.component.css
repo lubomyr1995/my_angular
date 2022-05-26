@@ -1,0 +1,19 @@
+.wrap_home {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div {
+  font-size: 150px;
+}
+
+.c1 {
+  color: #4f6ff1;
+}
+
+.c2 {
+  color: yellow;
+}
