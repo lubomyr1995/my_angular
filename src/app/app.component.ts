@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+import {AuthService} from "./services";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<router-outlet></router-outlet>'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'my_angular';
+  constructor(private router: Router, private authService: AuthService) {
+  }
+
+  ngOnInit(): void {
+    if (this.authService.isAuthorization()) {
+      this.router.navigate(['cars']).then()
+    }
+  }
 }

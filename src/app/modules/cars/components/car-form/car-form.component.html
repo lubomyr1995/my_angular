@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="create()">
+  <div><label>model: <input type="text" formControlName="model"></label></div>
+  <div><label>year: <input type="number" formControlName="year"></label></div>
+  <div><label>price: <input type="number" formControlName="price"></label></div>
+  <div>
+    <button>create</button>
+  </div>
+</form>

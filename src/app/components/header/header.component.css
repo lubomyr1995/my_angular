@@ -1,0 +1,32 @@
+.header_wrap {
+  height: 70px;
+  padding-left: 30px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+}
+
+.header_wrap > div > a {
+  font-size: 40px;
+}
+
+.header_wrap > div > div > a {
+  font-size: 20px;
+}
+
+.active a {
+  color: yellow;
+}
+
+.login_wrap {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
