@@ -1,0 +1,33 @@
+.header-wrap {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding-left: 20px;
+  background: black;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+}
+
+.login-wrap {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-wrap > div > a {
+  font-size: 18px;
+}
+
+.header-wrap > div > a {
+  font-size: 38px;
+}
+
+.active a {
+  color: red;
+}

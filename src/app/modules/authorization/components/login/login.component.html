@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+  <div><label>username: <input type="text" formControlName="username"></label></div>
+  <div><label>password: <input type="password" formControlName="password"></label></div>
+  <span style="color: red">{{loginNameError}}</span>
+  <div>
+    <button [disabled]="form.invalid">sign in</button>
+  </div>
+</form>

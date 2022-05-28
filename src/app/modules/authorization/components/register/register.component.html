@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="register()">
+  <div><label>username: <input type="text" formControlName="username"></label></div>
+  <div><label>password: <input type="password" formControlName="password"></label></div>
+  <div><label>confirmPassword: <input type="password" formControlName="confirmPassword"></label></div>
+  <span style="color: red" *ngIf="form.errors">{{form.errors['notSame']}}</span>
+  <span style="color: red">{{regNameError}}</span>
+  <div>
+    <button [disabled]="form.invalid">sign up</button>
+  </div>
+</form>

@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div><label>model: <input type="text" formControlName="model"></label></div>
+  <div><label>year: <input type="text" formControlName="year"></label></div>
+  <div><label>price: <input type="text" formControlName="price"></label></div>
+  <div>
+    <button (click)="save()">{{!carForUpdate ? 'save' : 'update'}}</button>
+  </div>
+</form>
+<hr>
+<app-car (deleteEmitter)="delete($event)" (updateEmitter)="update($event)" *ngFor="let car of cars"
+         [car]="car"></app-car>
